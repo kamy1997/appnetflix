@@ -9,35 +9,42 @@ import Movies from '../components/Movie';
 import LinearGradient from 'react-native-linear-gradient';
 import Hero from '../components/Hero';
 
-const api = [
-  require('../../assets/movie1.jpg'),
-  require('../../assets/movie2.jpg'),
-  require('../../assets/movie3.jpg'),
-  require('../../assets/movie4.jpg'),
-  require('../../assets/image5.jpg'),
-  require('../../assets/image6.jpg'),
-  require('../../assets/movie7.webp'),
-  require('../../assets/movie8.jpg'),
-];
-
 const movies = [
   {
-    nom: 'fiends',
+    title: 'fiends',
     image: require('../../assets/movie1.jpg'),
     video: 'https://www.youtube.com/watch?v=nnn02NDIEiE',
     video_id: 'nnn02NDIEiE',
   },
   {
-    nom: 'tactics love',
+    title: 'the willoughbys',
     image: require('../../assets/movie2.jpg'),
-    video: 'https://www.youtube.com/watch?v=nnn02NDIEiE',
-    video_id: 'nnn02NDIEiE',
+    video: 'https://www.youtube.com/watch?v=HnG4ag3Nkes',
+    video_id: 'HnG4ag3Nkes',
   },
   {
-    nom: '',
-    image: require('../../assets/movie2.jpg'),
-    video: 'https://www.youtube.com/watch?v=nnn02NDIEiE',
-    video_id: 'nnn02NDIEiE',
+    title: 'sonic',
+    image: require('../../assets/movie3.jpg'),
+    video: 'https://www.youtube.com/watch?v=g1LEbvTcUtc',
+    video_id: 'g1LEbvTcUtc',
+  },
+  {
+    title: 'never have i ever ',
+    image: require('../../assets/movie4.jpg'),
+    video: 'https://www.youtube.com/watch?v=FakCjoNnxik',
+    video_id: 'FakCjoNnxik',
+  },
+  {
+    title: 'tactics love ',
+    image: require('../../assets/image5.jpg'),
+    video: 'https://www.youtube.com/watch?v=CTN2EspZa_g',
+    video_id: 'CTN2EspZa_g',
+  },
+  {
+    title: 'through my window ',
+    image: require('../../assets/image6.jpg'),
+    video: 'https://www.youtube.com/watch?v=jNXZO24fohs',
+    video_id: 'jNXZO24fohs',
   },
 ];
 const Container = styled.ScrollView`
@@ -87,7 +94,7 @@ const Home = ({navigation}) => {
           item={movies}
         />
         <Movies
-          label="Films dActions "
+          label="Séries romantiques coréennnes "
           details={() => navigation.navigate('details')}
           item={movies}
         />

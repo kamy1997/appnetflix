@@ -11,16 +11,16 @@ const Movies = ({label, item, details}) => {
     <Container>
       <Label>{label}</Label>
       <MovieScroll horizontal>
-        {item.map((movies, i) => {
+        {item.map((movie, item) => {
           return (
-            <FlatList key={String(i)}>
+            <FlatList key={String(item)}>
               <Octicons name="play" size={26} />
 
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('Details', {movieUrl: i.video_id});
+                  navigation.navigate('Details', {movieUrl: movie.video_id});
                 }}>
-                <MoviePoster resizeMode="cover" source={i.image} />
+                <MoviePoster resizeMode="cover" source={movie.image} />
               </TouchableOpacity>
             </FlatList>
           );

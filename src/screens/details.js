@@ -1,11 +1,13 @@
 import React from 'react';
 
-import {useState, useCallback, useRef} from 'react';
+import {useState, useCallback} from 'react';
 import {Button, View, Alert} from 'react-native';
 import YoutubePlayer from 'react-native-youtube-iframe';
 
 export default function Details({route}) {
-  const {movieUrl} = route;
+  const {
+    params: {movieUrl},
+  } = route;
   console.log('url ', movieUrl);
   const [playing, setPlaying] = useState(false);
 
@@ -25,9 +27,11 @@ export default function Details({route}) {
       <YoutubePlayer
         height={300}
         play={playing}
-        videoId={'nnn02NDIEiE'}
+        videoId={movieUrl}
         onChangeState={onStateChange}
       />
+
+      <Button title={playing ? 'pause' : 'play'} onPress={togglePlaying} />
     </View>
   );
 }
