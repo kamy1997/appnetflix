@@ -4,6 +4,41 @@ import styled from 'styled-components';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+const Hero = () => {
+  return (
+    <Container>
+      <Banner
+        resizeMode="contain"
+        source={require('../../assets/banner.png')}
+      />
+      <Tags>
+        <MenuTag>Excentrique</MenuTag>
+        <Separator />
+        <MenuTag>Sitcom</MenuTag>
+        <Separator />
+        <MenuTag>Comédie</MenuTag>
+        <Separator />
+        <MenuTag>Distribution d'ensemble</MenuTag>
+      </Tags>
+      <MenuHero>
+        <Button>
+          <Feather name="plus" size={26} color="#FFF" />
+          <TextButton> Ma Liste </TextButton>
+        </Button>
+
+        <Play>
+          <Ionicons name="ios-play" size={26} />
+          <TextButtonPlay>Lecture</TextButtonPlay>
+        </Play>
+
+        <Button>
+          <Feather name="info" size={22} color="#FFF" />
+          <TextButton> Infos</TextButton>
+        </Button>
+      </MenuHero>
+    </Container>
+  );
+};
 const Container = styled.View`
   position: absolute;
   width: 100%;
@@ -68,41 +103,5 @@ const TextButtonPlay = styled.Text`
   font-weight: bold;
   padding-left: 5px;
 `;
-
-const Hero = () => {
-  return (
-    <Container>
-      <Banner
-        resizeMode="contain"
-        source={require('../../assets/banner.png')}
-      />
-      <Tags>
-        <MenuTag>Excentrique</MenuTag>
-        <Separator />
-        <MenuTag>Sitcom</MenuTag>
-        <Separator />
-        <MenuTag>Comédie</MenuTag>
-        <Separator />
-        <MenuTag>Distribution d'ensemble</MenuTag>
-      </Tags>
-      <MenuHero>
-        <Button>
-          <Feather name="plus" size={26} color="#FFF" />
-          <TextButton> Ma Liste </TextButton>
-        </Button>
-
-        <Play>
-          <Ionicons name="ios-play" size={26} />
-          <TextButtonPlay>Lecture</TextButtonPlay>
-        </Play>
-
-        <Button>
-          <Feather name="info" size={22} color="#FFF" />
-          <TextButton> Infos</TextButton>
-        </Button>
-      </MenuHero>
-    </Container>
-  );
-};
 
 export default Hero;

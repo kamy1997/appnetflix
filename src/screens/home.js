@@ -47,19 +47,6 @@ const movies = [
     video_id: 'jNXZO24fohs',
   },
 ];
-const Container = styled.ScrollView`
-  flex: 1;
-  background-color: #000;
-`;
-
-const Poster = styled.ImageBackground`
-  width: 100%;
-  height: ${(Dimensions.get('window').height * 81) / 100}px;
-`;
-
-const Gradient = styled(LinearGradient)`
-  height: 100%;
-`;
 
 const Home = ({navigation}) => {
   return (
@@ -102,5 +89,17 @@ const Home = ({navigation}) => {
     </>
   );
 };
+const Container = styled.ScrollView`
+  flex: 1;
+  background-color: #000;
+`;
 
+const Poster = styled.ImageBackground`
+  width: 100%;
+  height: ${(Dimensions.get('window').height * 81) / 100}px;
+`;
+
+const Gradient = styled(LinearGradient)`
+  height: 100%;
+`;
 export default Home;

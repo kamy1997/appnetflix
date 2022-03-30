@@ -2,6 +2,17 @@ import React from 'react';
 
 import styled from 'styled-components/native';
 
+const Header = () => {
+  return (
+    <Container>
+      <Logo resizeMode="contain" source={require('../../assets/logo.png')} />
+      <Menu>Séries</Menu>
+      <Menu>Filmes</Menu>
+      <Menu>Liste</Menu>
+    </Container>
+  );
+};
+
 const Container = styled.View`
   align-items: center;
   flex-direction: row;
@@ -20,16 +31,5 @@ const Menu = styled.Text`
   color: white;
   letter-spacing: 0.1px;
 `;
-
-const Header = () => {
-  return (
-    <Container>
-      <Logo resizeMode="contain" source={require('../../assets/logo.png')} />
-      <Menu>Séries</Menu>
-      <Menu>Filmes</Menu>
-      <Menu>list</Menu>
-    </Container>
-  );
-};
 
 export default Header;
